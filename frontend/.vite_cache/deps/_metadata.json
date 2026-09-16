@@ -1,65 +1,65 @@
 {
-  "hash": "2aafbc4a",
-  "browserHash": "61d2e830",
+  "hash": "452df504",
+  "browserHash": "6156d988",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "fa08bc4d",
+      "fileHash": "43735fa6",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "e1ae9f1d",
+      "fileHash": "df761dbd",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "b37f60d2",
+      "fileHash": "06e54f2a",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "6470a974",
+      "fileHash": "0101d2c7",
       "needsInterop": true
     },
     "axios": {
       "src": "../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "33f7eef0",
+      "fileHash": "dd495a45",
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "45ce523b",
+      "fileHash": "50bd691c",
       "needsInterop": true
     },
     "react-redux": {
       "src": "../../node_modules/react-redux/es/index.js",
       "file": "react-redux.js",
-      "fileHash": "92acf641",
+      "fileHash": "a55a367c",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "4c537afd",
+      "fileHash": "d2e00245",
       "needsInterop": false
     },
     "redux": {
       "src": "../../node_modules/redux/es/redux.js",
       "file": "redux.js",
-      "fileHash": "5d9dcc53",
+      "fileHash": "11dda164",
       "needsInterop": false
     },
     "redux-thunk": {
       "src": "../../node_modules/redux-thunk/es/index.js",
       "file": "redux-thunk.js",
-      "fileHash": "d2de37fe",
+      "fileHash": "0ca5c0ed",
       "needsInterop": false
     }
   },

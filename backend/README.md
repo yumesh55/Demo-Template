@@ -32,32 +32,31 @@ This is the Node.js/Express backend for the Equipment Rental Platform (Quipli Cl
 ### Setup Steps
 
 1. **Navigate to backend directory**
+
    ```bash
    cd backend
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Configure environment variables**
-   Create a `.env` file in the backend directory:
+   Copy `.env.example` to `.env` in the backend directory and set your MongoDB Atlas connection string:
    ```
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/equipment-rental
+   MONGODB_URI=mongodb+srv://<database-user>:<database-password>@<cluster-host>/<database-name>?retryWrites=true&w=majority
    JWT_SECRET=your_jwt_secret_key_here_change_in_production
    JWT_EXPIRES_IN=7d
    NODE_ENV=development
-   STRIPE_SECRET_KEY=sk_test_your_stripe_key_here
    ```
 
-4. **Start MongoDB**
-   ```bash
-   mongod
-   ```
+In Atlas, add your current IP address under **Network Access**, create a **Database User**, and choose **Connect > Drivers > Node.js** to copy the URI. URL-encode special characters in the database password, or use a password containing only letters, numbers, and safe symbols.
 
-5. **Run the server**
+4. **Run the server**
+
    ```bash
    # Development with auto-reload
    npm run dev
@@ -71,11 +70,13 @@ The server will run at `http://localhost:5000`
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/profile` - Get user profile (requires auth)
 
 ### Equipment
+
 - `GET /api/equipment` - Get all equipment (with filters)
 - `GET /api/equipment/:id` - Get equipment details
 - `POST /api/equipment` - Create new equipment (requires auth)
@@ -83,17 +84,20 @@ The server will run at `http://localhost:5000`
 - `DELETE /api/equipment/:id` - Delete equipment (requires auth)
 
 ### Bookings
+
 - `POST /api/bookings` - Create booking (requires auth)
 - `GET /api/bookings` - Get user's bookings (requires auth)
 - `PUT /api/bookings/:id/status` - Update booking status (requires auth)
 - `PUT /api/bookings/:id/cancel` - Cancel booking (requires auth)
 
 ### Reviews
+
 - `POST /api/reviews` - Create review (requires auth)
 - `GET /api/reviews/equipment/:equipmentId` - Get equipment reviews
 - `GET /api/reviews/user/:userId` - Get user reviews
 
 ### Users
+
 - `GET /api/users/:id` - Get user profile
 - `PUT /api/users/profile/update` - Update profile (requires auth)
 - `POST /api/users/save-equipment` - Save equipment (requires auth)
@@ -102,6 +106,7 @@ The server will run at `http://localhost:5000`
 ## Database Models
 
 ### User
+
 ```javascript
 {
   name: String,
@@ -118,6 +123,7 @@ The server will run at `http://localhost:5000`
 ```
 
 ### Equipment
+
 ```javascript
 {
   title: String,
@@ -136,6 +142,7 @@ The server will run at `http://localhost:5000`
 ```
 
 ### Booking
+
 ```javascript
 {
   equipment: ObjectId,
@@ -150,6 +157,7 @@ The server will run at `http://localhost:5000`
 ```
 
 ### Review
+
 ```javascript
 {
   equipment: ObjectId,
@@ -172,6 +180,7 @@ Authorization: Bearer <your_token_here>
 ## Error Handling
 
 All API errors follow this format:
+
 ```json
 {
   "error": "Error message describing what went wrong"
@@ -181,6 +190,7 @@ All API errors follow this format:
 ## Development
 
 ### Project Structure
+
 ```
 backend/
 ├── models/          # MongoDB schemas
