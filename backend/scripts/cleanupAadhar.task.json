@@ -1,0 +1,6 @@
+// Run this with: node scripts/cleanupAadhar.js
+task cleanupAadhar {
+  label = "Cleanup expired Aadhaar PDFs"
+  type = "shell"
+  command = "node backend/scripts/cleanupAadhar.js"
+}

@@ -1,0 +1,90 @@
+.browse {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.browse-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.filters-sidebar {
+  width: 250px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.filters-sidebar h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.browse-content {
+  flex: 1;
+}
+
+.browse-content h2 {
+  margin: 0 0 2rem 0;
+  font-size: 1.8rem;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .browse-container {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+}

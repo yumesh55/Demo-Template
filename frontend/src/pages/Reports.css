@@ -1,0 +1,256 @@
+.reports {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.reports-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 1.25rem;
+  align-items: end;
+  margin-bottom: 1.25rem;
+  padding: 1.35rem;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 44px rgba(17, 24, 39, 0.16);
+}
+
+.reports-eyebrow {
+  color: #60a5fa;
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reports-hero h1 {
+  margin: 0.35rem 0 0;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  line-height: 1.08;
+}
+
+.reports-hero p {
+  max-width: 680px;
+  margin: 0.65rem 0 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.reports-hero-panel {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+}
+
+.reports-hero-panel span,
+.report-card h3 {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.reports-hero-panel span {
+  color: #cbd5e1;
+}
+
+.reports-hero-panel strong {
+  display: block;
+  margin-top: 0.45rem;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.reports-hero-panel p {
+  margin-top: 0.65rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.report-card {
+  position: relative;
+  min-height: 155px;
+  overflow: hidden;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.report-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--primary);
+}
+
+.report-card.accent-green::before {
+  background: var(--success);
+}
+
+.report-card.accent-purple::before {
+  background: #7c3aed;
+}
+
+.report-card.accent-amber::before {
+  background: var(--warning);
+}
+
+.report-card.accent-slate::before {
+  background: #475569;
+}
+
+.report-card h3 {
+  margin: 0;
+}
+
+.card-value {
+  margin-top: 0.85rem;
+  color: var(--text);
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+  font-weight: 850;
+  line-height: 1;
+}
+
+.report-card p {
+  margin: 0.8rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.rental-history {
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.rental-history-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.rental-history h2 {
+  margin: 0.3rem 0 0;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.history-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.35rem 0.7rem;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.history-table thead {
+  background: var(--surface-muted);
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.95rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table th {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.history-table td {
+  color: #334155;
+  font-size: 0.94rem;
+}
+
+.history-table tbody tr:hover {
+  background: var(--surface-muted);
+}
+
+.history-table .status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.history-table .status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.history-table .status.completed {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.history-table .status.cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+@media (max-width: 1120px) {
+  .report-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .reports {
+    padding: 1rem;
+  }
+
+  .reports-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .report-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-history-header {
+    flex-direction: column;
+  }
+}
